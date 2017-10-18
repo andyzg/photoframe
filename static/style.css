@@ -32,3 +32,9 @@ body {
   margin: 16px auto;
   border-radius: 2px;
 }
+
+.file-input {
+  margin: 0 auto;
+  display: block;
+  padding: 16px 0 16px 0;
+}

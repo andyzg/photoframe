@@ -13,6 +13,7 @@ let downloadCanvasLink = (link, filename) => {
 };
 
 let loadImage = (ctx, image, padding) => {
+  ctx.fillRect(0, 0, LENGTH, LENGTH);
   let longerLength = image.width > image.height ? image.width : image.height;
   let shorterLength = image.width > image.height ? image.height : image.width;
   let resultLongerLength = padding * LENGTH;
@@ -35,16 +36,11 @@ $(document).ready(() => {
   ctx.fillStyle = '#fff';
   ctx.fillRect(0, 0, LENGTH, LENGTH);
   let image = new Image();
-  // image.src = TEST_URL;
-  // image.crossOrigin = "Anonymous";
-  // image.onload = function() {
-  //   loadImage(ctx, image, 0.92);
-  // }
 
   let previewFile = () => {
     let file = $('.file-input').prop('files');
     console.log(file);
-    if (file[0] && file[0].type !== 'image/jpeg') {
+    if (file[0] && !(file[0].type === 'image/jpeg' || file[0].type === 'image/png')) {
       alert('Need to upload an image.');
       e.preventDefault();
       return;
