@@ -1,0 +1,9 @@
+#canvas {
+  transform: scale(0.3, 0.3);
+  transform-origin: left top;
+}
+
+#canvas-container {
+  height: 360px;
+  width: 360px;
+}
