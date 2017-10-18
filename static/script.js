@@ -8,9 +8,8 @@ let LENGTH = 1080;
  * IMPORTANT: Call it from within a onclick event.
 */
 let downloadCanvasLink = (link, filename) => {
-  console.log('hello', link);
-    link.href = document.getElementById(CANVAS_ID).toDataURL();
-    link.download = filename;
+  link.href = document.getElementById(CANVAS_ID).toDataURL();
+  link.download = filename;
 };
 
 let loadImage = (ctx, image, padding) => {
@@ -33,12 +32,36 @@ let loadImage = (ctx, image, padding) => {
 $(document).ready(() => {
   let canvas = document.getElementById('canvas');
   let ctx = canvas.getContext('2d');
+  ctx.fillStyle = '#fff';
+  ctx.fillRect(0, 0, LENGTH, LENGTH);
   let image = new Image();
-  image.src = TEST_URL;
-  image.onload = function() {
-    loadImage(ctx, image, 0.92);
-  }
+  // image.src = TEST_URL;
+  // image.crossOrigin = "Anonymous";
+  // image.onload = function() {
+  //   loadImage(ctx, image, 0.92);
+  // }
 
+  let previewFile = () => {
+    let file = $('.file-input').prop('files');
+    console.log(file);
+    if (file[0] && file[0].type !== 'image/jpeg') {
+      alert('Need to upload an image.');
+      e.preventDefault();
+      return;
+    }
+    let reader = new FileReader();
+    reader.readAsDataURL(file[0]);
+    reader.onloadend = function(r) {
+      console.log(reader.result);
+      image.src = reader.result;
+      image.setAttribute('crossOrigin', 'anonymous');
+      image.onload = function() {
+        loadImage(ctx, image, 0.92);
+      };
+    };
+  };
 
-  $('#download').click(downloadCanvasLink.bind(this, $('#download')[0], 'result.jpg'));
+  $('.file-input').change(previewFile);
+
+  $('.download').click(downloadCanvasLink.bind(this, $('.download')[0], 'result.jpg'));
 });
