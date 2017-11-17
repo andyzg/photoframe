@@ -5,7 +5,7 @@ jobs:
       - image: circleci/python:rc
     steps:
       - checkout
-      - run: pytest
+      - test
   test:
     docker:
       - image: circleci/python:rc
