@@ -1,8 +1,15 @@
 version: 2
 jobs:
-   build:
-     docker:
-       - image: circleci/python:rc
-     steps:
-       - checkout
-       - run: pytest
+  build:
+    docker:
+      - image: circleci/python:rc
+    steps:
+      - checkout
+      - run: pytest
+  test:
+    override:
+      - pytest
+
+  dependencies:
+    pre:
+      -  pip install pytest
