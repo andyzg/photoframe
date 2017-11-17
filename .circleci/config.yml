@@ -5,7 +5,7 @@ jobs:
       - image: circleci/python:rc
     steps:
       - checkout
-      - test
+      - run: echo 'Hello World'
   test:
     docker:
       - image: circleci/python:rc
