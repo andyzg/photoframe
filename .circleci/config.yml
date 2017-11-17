@@ -11,4 +11,4 @@ jobs:
       - image: circleci/python:rc
     steps:
       - run: pip install pytest
-      - run: pytest
+      - run: py.test
