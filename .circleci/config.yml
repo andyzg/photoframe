@@ -7,6 +7,8 @@ jobs:
       - checkout
       - run: pytest
   test:
+    docker:
+      - image: circleci/python:rc
     steps:
       - run: pip install pytest
       - run: pytest
