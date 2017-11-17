@@ -1,8 +1,14 @@
 version: 2
 jobs:
-   build:
-     docker:
-       - image: circleci/python:rc
-     steps:
-       - checkout
-       - run: echo "hello world"
+  build:
+    docker:
+      - image: circleci/python:rc
+    steps:
+      - checkout
+      - run: echo 'Hello World'
+  test:
+    docker:
+      - image: circleci/python:rc
+    steps:
+      - run: pip install pytest
+      - run: py.test
