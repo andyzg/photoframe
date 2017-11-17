@@ -5,4 +5,4 @@ jobs:
        - image: circleci/python:rc
      steps:
        - checkout
-       - run: echo "hello world"
+       - run: pytest
