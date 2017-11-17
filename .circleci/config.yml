@@ -7,9 +7,6 @@ jobs:
       - checkout
       - run: pytest
   test:
-    override:
-      - pytest
-
-  dependencies:
-    pre:
-      -  pip install pytest
+    steps:
+      - run: pip install pytest
+      - run: pytest
