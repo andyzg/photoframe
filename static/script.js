@@ -33,6 +33,4 @@ $(document).ready(() => {
       $('.download')[0].download = file[0].name;
     });
   });
-
-  $('.download').click($('.download')[0], 'result.jpg');
 });
