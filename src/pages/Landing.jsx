@@ -13,8 +13,12 @@ class Landing extends React.Component {
 
   render() {
     return (
-      <div>
-        Landing
+      <div className={styles.container}>
+        <div className={styles.leftContent}>
+          <h1> Instaframe </h1>
+          <h3> Transform your feed into a beautiful collage of photos</h3>
+        </div>
+        <img className={styles.iphone} src="./img/iphone.png" />
       </div>
     );
   }

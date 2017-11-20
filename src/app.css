@@ -1,7 +1,3 @@
-.lol {
-  background-color: yellow;
-}
-
 .nav {
   position: fixed;
   top: 0;
@@ -27,4 +23,16 @@
   margin: 0 auto;
   max-width: 700px;
   width: 100%;
+}
+
+.rightBackground {
+  background-image: url(../img/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 120vh;
+  width: 83.55vh;
+  position: fixed;
+  top: 0;
+  right: -15vh;
+  z-index: -1;
 }

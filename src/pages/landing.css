@@ -1,0 +1,13 @@
+.leftContent {
+  width: 400px;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+}
+
+.iphone {
+  width: 300px;
+}

@@ -7,6 +7,9 @@ module.exports = {
   module: {
     loaders: [
       {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader'
+      }, {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/

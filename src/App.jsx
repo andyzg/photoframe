@@ -14,9 +14,8 @@ const PROCESSING = 'PROCESSING';
 let Nav = (props) => {
   return (
     <div className={styles.nav}>
-      <a className={styles.nav__link} href="#">A link</a>
-      <a className={styles.nav__link} href="#">A link</a>
-      <a className={styles.nav__link} href="#">A link</a>
+      <a className={styles.nav__link} href="#">Home</a>
+      <a className={styles.nav__link} href="#">About</a>
     </div>
   );
 }
@@ -46,11 +45,12 @@ class App extends React.Component {
     }
 
     return (
-      <div className={styles.lol}>
+      <div>
         <Nav />
         <div className={styles.content}>
           {content}
         </div>
+        <div className={styles.rightBackground} />
       </div>
     );
   }
