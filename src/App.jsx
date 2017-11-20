@@ -11,6 +11,16 @@ const CONFIG = 'CONFIG';
 const PROCESSING = 'PROCESSING';
 
 
+let Nav = (props) => {
+  return (
+    <div className={styles.nav}>
+      <a className={styles.nav__link} href="#">A link</a>
+      <a className={styles.nav__link} href="#">A link</a>
+      <a className={styles.nav__link} href="#">A link</a>
+    </div>
+  );
+}
+
 class App extends React.Component {
 
   constructor(props) {
@@ -37,7 +47,10 @@ class App extends React.Component {
 
     return (
       <div className={styles.lol}>
-        {content}
+        <Nav />
+        <div className={styles.content}>
+          {content}
+        </div>
       </div>
     );
   }

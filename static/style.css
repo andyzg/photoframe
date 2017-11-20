@@ -2,18 +2,6 @@ body {
   font-family: 'Josefin Sans', sans-serif;
 }
 
-#canvas {
-  transform: scale(0.3, 0.3);
-  transform-origin: left top;
-}
-
-#canvas-container {
-  height: 324px;
-  width: 324px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  margin: 0 auto;
-}
-
 .download:visited,
 .download:link,
 .download {

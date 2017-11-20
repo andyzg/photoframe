@@ -1,3 +1,30 @@
 .lol {
   background-color: yellow;
 }
+
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 32px 32px 0 32px;
+}
+
+.nav__link,
+.nav__link:visited,
+.nav__link:link,
+.nav__link:active {
+  color: #999;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 0 16px;
+}
+
+.nav__link:hover {
+  color: #0099ff;
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 700px;
+  width: 100%;
+}

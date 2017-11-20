@@ -18727,6 +18727,28 @@ const LANDING = 'LANDING';
 const CONFIG = 'CONFIG';
 const PROCESSING = 'PROCESSING';
 
+let Nav = props => {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'div',
+    { className: __WEBPACK_IMPORTED_MODULE_4__app_css___default.a.nav },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'a',
+      { className: __WEBPACK_IMPORTED_MODULE_4__app_css___default.a.nav__link, href: '#' },
+      'A link'
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'a',
+      { className: __WEBPACK_IMPORTED_MODULE_4__app_css___default.a.nav__link, href: '#' },
+      'A link'
+    ),
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'a',
+      { className: __WEBPACK_IMPORTED_MODULE_4__app_css___default.a.nav__link, href: '#' },
+      'A link'
+    )
+  );
+};
+
 class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
   constructor(props) {
@@ -18754,7 +18776,12 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
       { className: __WEBPACK_IMPORTED_MODULE_4__app_css___default.a.lol },
-      content
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Nav, null),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: __WEBPACK_IMPORTED_MODULE_4__app_css___default.a.content },
+        content
+      )
     );
   }
 }
@@ -19130,11 +19157,14 @@ exports = module.exports = __webpack_require__(5)(undefined);
 
 
 // module
-exports.push([module.i, ".app__lol___1S8wo {\n  background-color: yellow;\n}\n", ""]);
+exports.push([module.i, ".app__lol___1S8wo {\n  background-color: yellow;\n}\n\n.app__nav___2Mm1A {\n  position: fixed;\n  top: 0;\n  width: 100%;\n  padding: 32px 32px 0 32px;\n}\n\n.app__nav__link___2CQHT,\n.app__nav__link___2CQHT:visited,\n.app__nav__link___2CQHT:link,\n.app__nav__link___2CQHT:active {\n  color: #999;\n  text-decoration: none;\n  transition: color 0.2s ease;\n  padding: 0 16px;\n}\n\n.app__nav__link___2CQHT:hover {\n  color: #0099ff;\n}\n\n.app__content___37dfQ {\n  margin: 0 auto;\n  max-width: 700px;\n  width: 100%;\n}\n", ""]);
 
 // exports
 exports.locals = {
-	"lol": "app__lol___1S8wo"
+	"lol": "app__lol___1S8wo",
+	"nav": "app__nav___2Mm1A",
+	"nav__link": "app__nav__link___2CQHT",
+	"content": "app__content___37dfQ"
 };
 
 /***/ })
