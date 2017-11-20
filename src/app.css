@@ -10,9 +10,12 @@
 .nav__link:link,
 .nav__link:active {
   color: #999;
+  font-size: 11px;
   text-decoration: none;
   transition: color 0.2s ease;
   padding: 0 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .nav__link:hover {
@@ -35,4 +38,28 @@
   top: 0;
   right: -15vh;
   z-index: -1;
+}
+
+@media screen and (min-width: 600px) {
+  .rightBackground {
+    right: -55vh;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .rightBackground {
+    right: -35vh;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .rightBackground {
+    right: -15vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .rightBackground {
+    display: none;
+  }
 }

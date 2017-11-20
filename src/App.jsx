@@ -50,7 +50,7 @@ class App extends React.Component {
         <div className={styles.content}>
           {content}
         </div>
-        <div className={styles.rightBackground} />
+        {this.state.page === LANDING ? <div className={styles.rightBackground} /> : null}
       </div>
     );
   }

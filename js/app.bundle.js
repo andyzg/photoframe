@@ -18777,7 +18777,7 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         { className: __WEBPACK_IMPORTED_MODULE_4__app_css___default.a.content },
         content
       ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_4__app_css___default.a.rightBackground })
+      this.state.page === LANDING ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_4__app_css___default.a.rightBackground }) : null
     );
   }
 }
@@ -18809,6 +18809,11 @@ class Landing extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     };
   }
 
+  onClick() {
+    $('#file-input').trigger('click');
+    $('#file-input').change(this.onUploadComplete);
+  }
+
   render() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
@@ -18826,7 +18831,7 @@ class Landing extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
           null,
           ' Transform your feed into a beautiful collage of photos'
         ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__components_button_button_jsx__["a" /* default */], { className: __WEBPACK_IMPORTED_MODULE_2__landing_css___default.a.button, text: 'UPLOAD PHOTOS', onClick: () => {} }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__components_button_button_jsx__["a" /* default */], { className: __WEBPACK_IMPORTED_MODULE_2__landing_css___default.a.button, text: 'UPLOAD PHOTOS', onClick: this.onClick.bind(this) }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
           { className: __WEBPACK_IMPORTED_MODULE_2__landing_css___default.a.dragCaption },
@@ -18880,7 +18885,7 @@ exports = module.exports = __webpack_require__(5)(undefined);
 
 
 // module
-exports.push([module.i, ".landing__leftContent___Ix9rm {\n  width: 400px;\n}\n\n.landing__container___1n3qD {\n  align-items: center;\n  display: flex;\n  height: 100vh;\n}\n\n.landing__iphone___1bS03 {\n  width: 300px;\n}\n\n.landing__button___FbwHw {\n  margin-top: 16px;\n  margin-bottom: 16px;\n}\n\n.landing__dragCaption___1Nlj8 {\n  color: #bbb;\n  font-size: 14px;\n}\n", ""]);
+exports.push([module.i, ".landing__leftContent___Ix9rm {\n  width: 400px;\n}\n\n.landing__container___1n3qD {\n  align-items: center;\n  display: flex;\n  height: 100vh;\n}\n\n.landing__iphone___1bS03 {\n  width: 300px;\n}\n\n.landing__button___FbwHw {\n  margin-top: 16px;\n  margin-bottom: 16px;\n}\n\n.landing__dragCaption___1Nlj8 {\n  color: #bbb;\n  font-size: 14px;\n}\n\n@media screen and (max-width: 600px) {\n  .landing__container___1n3qD {\n    display: block;\n    height: calc(100vh - 200px);\n    padding-top: 200px;\n    overflow: hidden;\n  }\n\n  .landing__leftContent___Ix9rm {\n    display: block;\n    width: 60%;\n    margin: 0 auto;\n  }\n\n  .landing__iphone___1bS03 {\n    display: block;\n    margin: 16px auto;\n    width: 80%;\n  }\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -19188,7 +19193,7 @@ exports = module.exports = __webpack_require__(5)(undefined);
 
 
 // module
-exports.push([module.i, ".app__nav___2Mm1A {\n  position: fixed;\n  top: 0;\n  width: 100%;\n  padding: 32px 32px 0 32px;\n}\n\n.app__nav__link___2CQHT,\n.app__nav__link___2CQHT:visited,\n.app__nav__link___2CQHT:link,\n.app__nav__link___2CQHT:active {\n  color: #999;\n  text-decoration: none;\n  transition: color 0.2s ease;\n  padding: 0 16px;\n}\n\n.app__nav__link___2CQHT:hover {\n  color: #0099ff;\n}\n\n.app__content___37dfQ {\n  margin: 0 auto;\n  max-width: 700px;\n  width: 100%;\n}\n\n.app__rightBackground___2AelG {\n  background-image: url(" + __webpack_require__(33) + ");\n  background-repeat: no-repeat;\n  background-size: cover;\n  height: 120vh;\n  width: 83.55vh;\n  position: fixed;\n  top: 0;\n  right: -15vh;\n  z-index: -1;\n}\n", ""]);
+exports.push([module.i, ".app__nav___2Mm1A {\n  position: fixed;\n  top: 0;\n  width: 100%;\n  padding: 32px 32px 0 32px;\n}\n\n.app__nav__link___2CQHT,\n.app__nav__link___2CQHT:visited,\n.app__nav__link___2CQHT:link,\n.app__nav__link___2CQHT:active {\n  color: #999;\n  font-size: 11px;\n  text-decoration: none;\n  transition: color 0.2s ease;\n  padding: 0 16px;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n}\n\n.app__nav__link___2CQHT:hover {\n  color: #0099ff;\n}\n\n.app__content___37dfQ {\n  margin: 0 auto;\n  max-width: 700px;\n  width: 100%;\n}\n\n.app__rightBackground___2AelG {\n  background-image: url(" + __webpack_require__(33) + ");\n  background-repeat: no-repeat;\n  background-size: cover;\n  height: 120vh;\n  width: 83.55vh;\n  position: fixed;\n  top: 0;\n  right: -15vh;\n  z-index: -1;\n}\n\n@media screen and (min-width: 600px) {\n  .app__rightBackground___2AelG {\n    right: -55vh;\n  }\n}\n\n@media screen and (min-width: 800px) {\n  .app__rightBackground___2AelG {\n    right: -35vh;\n  }\n}\n\n@media screen and (min-width: 1100px) {\n  .app__rightBackground___2AelG {\n    right: -15vh;\n  }\n}\n\n@media screen and (max-width: 600px) {\n  .app__rightBackground___2AelG {\n    display: none;\n  }\n}\n", ""]);
 
 // exports
 exports.locals = {
