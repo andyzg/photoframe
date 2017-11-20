@@ -1,3 +1,4 @@
+
 let CANVAS_ID = 'canvas';
 let TEST_URL = 'https://github.com/andyzg/gallery/blob/gh-pages/photos/California/DSCF1894.jpg?raw=true'
 let LENGTH = 1080;
@@ -39,7 +40,6 @@ $(document).ready(() => {
 
   let previewFile = () => {
     let file = $('.file-input').prop('files');
-    console.log(file);
     if (file[0] && !(file[0].type === 'image/jpeg' || file[0].type === 'image/png')) {
       alert('Need to upload an image.');
       e.preventDefault();
