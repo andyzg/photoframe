@@ -11,3 +11,13 @@
 .iphone {
   width: 300px;
 }
+
+.button {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.dragCaption {
+  color: #bbb;
+  font-size: 14px;
+}

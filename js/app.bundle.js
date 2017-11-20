@@ -18791,8 +18791,11 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__landing_css__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__landing_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__landing_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_button_button_jsx__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__landing_css__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__landing_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__landing_css__);
+
+
 
 
 
@@ -18809,10 +18812,10 @@ class Landing extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   render() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      { className: __WEBPACK_IMPORTED_MODULE_1__landing_css___default.a.container },
+      { className: __WEBPACK_IMPORTED_MODULE_2__landing_css___default.a.container },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
-        { className: __WEBPACK_IMPORTED_MODULE_1__landing_css___default.a.leftContent },
+        { className: __WEBPACK_IMPORTED_MODULE_2__landing_css___default.a.leftContent },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'h1',
           null,
@@ -18822,9 +18825,15 @@ class Landing extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
           'h3',
           null,
           ' Transform your feed into a beautiful collage of photos'
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__components_button_button_jsx__["a" /* default */], { className: __WEBPACK_IMPORTED_MODULE_2__landing_css___default.a.button, text: 'UPLOAD PHOTOS', onClick: () => {} }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: __WEBPACK_IMPORTED_MODULE_2__landing_css___default.a.dragCaption },
+          'Or drag your photos here to start!'
         )
       ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: __WEBPACK_IMPORTED_MODULE_1__landing_css___default.a.iphone, src: './img/iphone.png' })
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: __WEBPACK_IMPORTED_MODULE_2__landing_css___default.a.iphone, src: './img/iphone.png' })
     );
   }
 }
@@ -18871,13 +18880,15 @@ exports = module.exports = __webpack_require__(5)(undefined);
 
 
 // module
-exports.push([module.i, ".landing__leftContent___Ix9rm {\n  width: 400px;\n}\n\n.landing__container___1n3qD {\n  align-items: center;\n  display: flex;\n  height: 100vh;\n}\n\n.landing__iphone___1bS03 {\n  width: 300px;\n}\n", ""]);
+exports.push([module.i, ".landing__leftContent___Ix9rm {\n  width: 400px;\n}\n\n.landing__container___1n3qD {\n  align-items: center;\n  display: flex;\n  height: 100vh;\n}\n\n.landing__iphone___1bS03 {\n  width: 300px;\n}\n\n.landing__button___FbwHw {\n  margin-top: 16px;\n  margin-bottom: 16px;\n}\n\n.landing__dragCaption___1Nlj8 {\n  color: #bbb;\n  font-size: 14px;\n}\n", ""]);
 
 // exports
 exports.locals = {
 	"leftContent": "landing__leftContent___Ix9rm",
 	"container": "landing__container___1n3qD",
-	"iphone": "landing__iphone___1bS03"
+	"iphone": "landing__iphone___1bS03",
+	"button": "landing__button___FbwHw",
+	"dragCaption": "landing__dragCaption___1Nlj8"
 };
 
 /***/ }),
@@ -19185,6 +19196,83 @@ exports.locals = {
 	"nav__link": "app__nav__link___2CQHT",
 	"content": "app__content___37dfQ",
 	"rightBackground": "app__rightBackground___2AelG"
+};
+
+/***/ }),
+/* 43 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__style_css__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__style_css__);
+
+
+
+
+class Button extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      'button',
+      { className: __WEBPACK_IMPORTED_MODULE_1__style_css___default.a.button + ' ' + this.props.className, onClick: this.props.onClick },
+      this.props.text
+    );
+  }
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (Button);
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(45);
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(6)(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../../../node_modules/css-loader/index.js?modules=true&localIdentName=[name]__[local]___[hash:base64:5]!./style.css", function() {
+			var newContent = require("!!../../../node_modules/css-loader/index.js?modules=true&localIdentName=[name]__[local]___[hash:base64:5]!./style.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(5)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, ".style__button___Dv_TK {\n  background: linear-gradient(109.39deg, #00D2E5 0%, #0095FF 100%);\n  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);\n  border-radius: 4px;\n\n  width: 200px;\n  height: 60px;\n\n  color: white;\n  font-size: 14px;\n  font-weight: 600;\n  letter-spacing: 2px;\n\n  cursor: pointer;\n}\n\n.style__button___Dv_TK:focus {\n  outline: none;\n  border: 2px solid #007BCC;\n}\n", ""]);
+
+// exports
+exports.locals = {
+	"button": "style__button___Dv_TK"
 };
 
 /***/ })
