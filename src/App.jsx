@@ -1,21 +1,66 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
+import Landing from './pages/Landing.jsx';
+import Config from './pages/Config.jsx';
+import Processing from './pages/Processing.jsx';
+
+import styles from './app.css';
+
+const LANDING = 'LANDING';
+const CONFIG = 'CONFIG';
+const PROCESSING = 'PROCESSING';
+
+
+let Nav = (props) => {
+  return (
+    <div className={styles.nav}>
+      <a className={styles.nav__link} href="#">Home</a>
+      <a className={styles.nav__link} href="#">About</a>
+    </div>
+  );
+}
 
 class App extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      count: 0
-    };
   }
 
   render() {
+    let content = null;
+    switch (this.props.page) {
+      case CONFIG:
+        content = <Config />;
+        break;
+      case PROCESSING:
+        content = <Processing />;
+        break;
+      case LANDING:
+      default:
+        content = <Landing />;
+        break;
+    }
+
     return (
       <div>
-        Poor me
+        <Nav />
+        <div className={styles.content}>
+          {content}
+        </div>
+        {this.props.page === LANDING ? <div className={styles.rightBackground} /> : null}
       </div>
     );
   }
 }
 
-export default App;
+
+const mapStateToProps = (state, ownProps) => {
+  return {
+    page: state.page
+  }
+}
+
+export default connect(
+  mapStateToProps
+)(App)

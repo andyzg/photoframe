@@ -1,17 +1,5 @@
 body {
-  font-family: 'Josefin Sans', sans-serif;
-}
-
-#canvas {
-  transform: scale(0.3, 0.3);
-  transform-origin: left top;
-}
-
-#canvas-container {
-  height: 324px;
-  width: 324px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  margin: 0 auto;
+  font-family: 'Helvetica', sans-serif;
 }
 
 .download:visited,
@@ -37,4 +25,34 @@ body {
   margin: 0 auto;
   display: block;
   padding: 16px 0 16px 0;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+h3 {
+  margin-bottom: 8px;
+
+  color: #999;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+h4 {
+  margin-bottom: 8px;
+
+  color: #999;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.25;
 }

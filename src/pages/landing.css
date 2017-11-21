@@ -1,0 +1,44 @@
+.leftContent {
+  width: 400px;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+}
+
+.iphone {
+  width: 300px;
+}
+
+.button {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.dragCaption {
+  color: #bbb;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    display: block;
+    height: calc(100vh - 200px);
+    padding-top: 200px;
+    overflow: hidden;
+  }
+
+  .leftContent {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .iphone {
+    display: block;
+    margin: 16px auto;
+    width: 80%;
+  }
+}

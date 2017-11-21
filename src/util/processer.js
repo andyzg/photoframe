@@ -1,7 +1,12 @@
-class PhotoFrame {
+class Processor {
 
-  constructor(canvasId, length, aspectRatio) {
-    this.canvas = document.getElementById(canvasId);
+  constructor(length, aspectRatio) {
+    this.canvas = document.createElement('canvas');
+    this.canvas.width = length;
+    this.canvas.height = length;
+    this.canvas.style.display = 'none';
+    document.body.appendChild(this.canvas);
+    this.canvas.style.display = 'none';
     this.ctx = this.canvas.getContext('2d');
     this.ctx.fillStyle = '#ffffff';
     this.ctx.fillRect(0, 0, length, length);
@@ -51,6 +56,10 @@ class PhotoFrame {
     let resultHeight = image.width > image.height ? resultShorterLength : resultLongerLength;
     this.ctx.drawImage(image, x, y, resultWidth, resultHeight);
 
+
     this.callback(this.canvas.toDataURL());
+    this.canvas.remove();
   }
 }
+
+export default Processor;

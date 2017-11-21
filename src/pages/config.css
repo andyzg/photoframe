@@ -1,0 +1,30 @@
+.container {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+}
+
+.title {
+  margin-bottom: 16px;
+}
+
+.options {
+  display: flex;
+}
+
+.options__item {
+  height: 32px;
+  width: 90px;
+  margin-right: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: #fff;
+
+  background-color: #0099ff;
+  border-radius: 2px;
+  cursor: pointer;
+}
