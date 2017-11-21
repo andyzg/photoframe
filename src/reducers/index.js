@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import photoframe from './photoframe.js';
+import Page from './Page.js';
+import Photos from './Photos.js';
 
 const photoframeApp = combineReducers({
-  photoframe
+  Page,
+  Photos
 });
 
 export default photoframeApp;

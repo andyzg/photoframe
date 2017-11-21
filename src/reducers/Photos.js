@@ -1,4 +1,4 @@
-const photoframe = (state = [], action) => {
+const Photos = (state = [], action) => {
   switch (action.type) {
     case 'CONFIGURE_PHOTOS':
     default:
@@ -7,4 +7,4 @@ const photoframe = (state = [], action) => {
   }
 }
 
-export default photoframe;
+export default Photos;

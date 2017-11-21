@@ -18,3 +18,5 @@ __pycache__/
 *$py.class
 
 node_modules/
+
+js/app.bundle.js
