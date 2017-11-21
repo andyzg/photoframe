@@ -1,9 +1,9 @@
 const page = (state = 'LANDING', action) => {
   switch (action.type) {
-    case 'CONFIGURE_PHOTOS':
-      return 'CONFIG';
+    case 'UPLOAD_PHOTOS':
+      return 'PROCESSING';
     default:
-      return 'LANDING';
+      return state;
   }
 }
 

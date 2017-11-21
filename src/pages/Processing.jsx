@@ -1,5 +1,8 @@
 import React from 'react';
 
+import ProcessingPhotoList from '../containers/ProcessingList.jsx';
+import DownloadButton from '../containers/DownloadButton.jsx';
+
 import styles from './processing.css';
 
 class Processing extends React.Component {
@@ -13,8 +16,11 @@ class Processing extends React.Component {
 
   render() {
     return (
-      <div>
-        Processing
+      <div className={styles.container}>
+        <h2> Processing your photos... </h2>
+        <h4> This should take just a moment. </h4>
+        <ProcessingPhotoList />
+        <DownloadButton text={'DOWNLOAD'} />
       </div>
     );
   }

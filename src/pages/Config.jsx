@@ -13,8 +13,11 @@ class Config extends React.Component {
 
   render() {
     return (
-      <div>
-        Config
+      <div className={styles.container}>
+        <div>
+          <h2 className={styles.title}> One last step... </h2>
+          <h4> What kind of framing style do you want?</h4>
+        </div>
       </div>
     );
   }

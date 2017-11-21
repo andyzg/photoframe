@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { configurePhotos } from '../actions/index.js';
+import { uploadPhotos } from '../actions/index.js';
 import Photo from '../models/Photo.js';
 import Button from '../components/button/button.jsx';
 
@@ -22,7 +22,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         for (let i = 0; i < files.length; i++) {
           photoList.push(new Photo(files[i]));
         }
-        dispatch(configurePhotos(photoList));
+        dispatch(uploadPhotos(photoList));
       });
     }
   }

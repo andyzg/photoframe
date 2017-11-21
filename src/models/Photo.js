@@ -1,10 +1,9 @@
+import Processor from '../util/processer.js';
+
+
 class Photo {
   constructor(file) {
-    this.lastModified = file.lastModified;
-    this.lastModifiedDate = file.lastModifiedDate;
-    this.name = file.name;
-    this.size = file.size;
-    this.type = file.type;
+    this.file = file;
   }
 
   static isValidPhoto(file) {
@@ -12,6 +11,13 @@ class Photo {
       return true
     }
     return false;
+  }
+
+  process(callback) {
+    let processor = new Processor(1080, 0.952);
+    processor.uploadImageFile(this.file, (data) => {
+      callback(data, this.file.name);
+    });
   }
 }
 

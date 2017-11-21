@@ -1,6 +1,14 @@
-export const configurePhotos = (photos) => {
+export const uploadPhotos = (photos) => {
   return {
-    type: 'CONFIGURE_PHOTOS',
+    type: 'UPLOAD_PHOTOS',
     photos: photos
   }
+}
+
+export const addCompletePhoto = (imageData, name) => {
+  return {
+    type: 'ADD_COMPLETE_PHOTO',
+    imageData,
+    name
+  };
 }

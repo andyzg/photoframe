@@ -1,6 +1,7 @@
 const photos = (state = [], action) => {
   switch (action.type) {
-    case 'CONFIGURE_PHOTOS':
+    case 'UPLOAD_PHOTOS':
+      console.log(action.photos);
       return action.photos;
     default:
       return state;

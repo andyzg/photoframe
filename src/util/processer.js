@@ -1,6 +1,6 @@
-class PhotoFrame {
+class Processor {
 
-  constructor(canvasId, length, aspectRatio) {
+  constructor(length, aspectRatio) {
     this.canvas = document.createElement('canvas');
     this.canvas.width = length;
     this.canvas.height = length;
@@ -61,3 +61,5 @@ class PhotoFrame {
     this.canvas.remove();
   }
 }
+
+export default Processor;
