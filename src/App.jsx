@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import Landing from './pages/Landing.jsx';
 import Config from './pages/Config.jsx';
@@ -24,14 +25,11 @@ class App extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      page: LANDING
-    };
   }
 
   render() {
     let content = null;
-    switch (this.state.page) {
+    switch (this.props.page) {
       case CONFIG:
         content = <Config />;
         break;
@@ -50,10 +48,19 @@ class App extends React.Component {
         <div className={styles.content}>
           {content}
         </div>
-        {this.state.page === LANDING ? <div className={styles.rightBackground} /> : null}
+        {this.props.page === LANDING ? <div className={styles.rightBackground} /> : null}
       </div>
     );
   }
 }
 
-export default App;
+
+const mapStateToProps = (state, ownProps) => {
+  return {
+    page: state.page
+  }
+}
+
+export default connect(
+  mapStateToProps
+)(App)

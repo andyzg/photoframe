@@ -1,10 +1,10 @@
-const Photos = (state = [], action) => {
+const photos = (state = [], action) => {
   switch (action.type) {
     case 'CONFIGURE_PHOTOS':
+      return action.photos;
     default:
-      console.log('I got the action!');
-      return 'CONFIGURE_PHOTOS';
+      return state;
   }
 }
 
-export default Photos;
+export default photos;
