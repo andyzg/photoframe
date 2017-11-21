@@ -12,3 +12,9 @@ export const addCompletePhoto = (imageData, name) => {
     name
   };
 }
+
+export const downloadPhotos = () => {
+  return {
+    type: 'DOWNLOAD_PHOTOS'
+  }
+}

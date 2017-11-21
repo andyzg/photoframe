@@ -17,11 +17,13 @@ class ProcessingItem extends React.Component {
 
   render() {
     if (this.state.status !== COMPLETE) {
+      setTimeout(() => {
       this.props.photo.process((imageData, name) => {
         console.log('Done processing photo');
         this.props.addCompletePhoto(imageData, name);
         this.setState({ status: COMPLETE });
       });
+      }, 1000);
     }
 
     return (

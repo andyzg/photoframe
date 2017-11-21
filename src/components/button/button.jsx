@@ -9,8 +9,12 @@ class Button extends React.Component {
   }
 
   render() {
+    let classList = [styles.button, this.props.className];
+    if (this.props.isDisabled) {
+      classList.push(styles.disabled);
+    }
     return (
-      <button className={styles.button + ' ' + this.props.className} onClick={this.props.onClick}>
+      <button className={classList.join(' ')} onClick={this.props.onClick}>
         {this.props.text}
       </button>
     );

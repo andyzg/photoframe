@@ -13,7 +13,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     addCompletePhoto: (imageData, name) => {
-      addCompletePhoto(imageData, name);
+      dispatch(addCompletePhoto(imageData, name));
     }
   }
 };
