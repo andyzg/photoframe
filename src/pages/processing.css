@@ -1,3 +1,19 @@
 .container {
   padding-top: 200px;
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+}
+
+.divider {
+  width: 60%;
+  background-color: #eeeeee;
+  height: 1px;
+  width: 100%;
+  margin: 8px 0;
+}
+
+.downloadButton {
+  display: block;
+  margin: 32px auto;
 }

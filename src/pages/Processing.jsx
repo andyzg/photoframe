@@ -16,8 +16,10 @@ class Processing extends React.Component {
       <div className={styles.container}>
         <h2> Processing your photos... </h2>
         <h4> This should take just a moment. </h4>
+        <div className={styles.divider} />
         <ProcessingPhotoList />
-        <DownloadButton text={'DOWNLOAD'} />
+        <div className={styles.divider} />
+        <DownloadButton className={styles.downloadButton} text={'DOWNLOAD'} />
       </div>
     );
   }

@@ -13,8 +13,9 @@ class Button extends React.Component {
     if (this.props.isDisabled) {
       classList.push(styles.disabled);
     }
+
     return (
-      <button className={classList.join(' ')} onClick={this.props.onClick}>
+      <button className={classList.join(' ')} onClick={this.props.isDisabled ? null : this.props.onClick}>
         {this.props.text}
       </button>
     );

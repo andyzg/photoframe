@@ -4,6 +4,8 @@ import Processor from '../util/processer.js';
 class Photo {
   constructor(file) {
     this.file = file;
+    this.name = this.file.name;
+    this.size = this.file.size;
   }
 
   static isValidPhoto(file) {
