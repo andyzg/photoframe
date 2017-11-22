@@ -1038,6 +1038,7 @@ module.exports = warning;
 
 "use strict";
 const uploadPhotos = photos => {
+  ga('send', 'event', 'Photos', 'upload', 'action', photos.length);
   return {
     type: 'UPLOAD_PHOTOS',
     photos: photos
@@ -1057,6 +1058,7 @@ const addCompletePhoto = (imageData, name) => {
 
 
 const showPhotos = () => {
+  ga('send', 'event', 'Photos', 'showMobile', 'action');
   return {
     type: 'SHOW_PHOTOS'
   };
@@ -1065,6 +1067,7 @@ const showPhotos = () => {
 
 
 const downloadPhotos = () => {
+  ga('send', 'event', 'Photos', 'download', 'action');
   return {
     type: 'DOWNLOAD_PHOTOS'
   };
@@ -1081,6 +1084,7 @@ const goHome = () => {
 
 
 const goAbout = () => {
+  ga('send', 'pageview', 'about');
   return {
     type: 'GO_ABOUT'
   };
@@ -21778,7 +21782,6 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   }
 
   render() {
-
     let content = null;
     switch (this.props.page) {
       case CONFIG:
@@ -21801,14 +21804,24 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      null,
+      { className: __WEBPACK_IMPORTED_MODULE_8__app_css___default.a.container },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ConnectedNav, { page: this.props.page }),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: __WEBPACK_IMPORTED_MODULE_8__app_css___default.a.content },
         content
       ),
-      this.props.page === LANDING ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_8__app_css___default.a.rightBackground }) : null
+      this.props.page === LANDING ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: __WEBPACK_IMPORTED_MODULE_8__app_css___default.a.rightBackground }) : null,
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: __WEBPACK_IMPORTED_MODULE_8__app_css___default.a.footer },
+        'Made by ',
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'a',
+          { href: 'https://www.instagram.com/andy.fuji/' },
+          '@andy.fuji'
+        )
+      )
     );
   }
 }
@@ -21844,6 +21857,14 @@ class Landing extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     this.state = {};
   }
 
+  onPhoneClick() {
+    ga('send', 'pageview', 'mobile-phone-instagram');
+  }
+
+  onGalleryClick() {
+    ga('send', 'pageview', 'mobile-gallery-instagram');
+  }
+
   render() {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
@@ -21863,10 +21884,14 @@ class Landing extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__containers_UploadButton_jsx__["a" /* default */], { className: __WEBPACK_IMPORTED_MODULE_2__landing_css___default.a.button, text: 'UPLOAD PHOTOS', fileInput: $('#file-input') })
       ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: __WEBPACK_IMPORTED_MODULE_2__landing_css___default.a.iphone, src: './img/iphone.png' }),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'a',
-        { href: 'https://www.instagram.com/andy.fuji' },
+        { onClick: this.onPhoneClick, href: 'https://www.instagram.com/andy.fuji' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: __WEBPACK_IMPORTED_MODULE_2__landing_css___default.a.iphone, src: './img/iphone.png' })
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'a',
+        { onClick: this.onGalleryClick, href: 'https://www.instagram.com/andy.fuji' },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: __WEBPACK_IMPORTED_MODULE_2__landing_css___default.a.gallery, src: './img/background-full.png' })
       )
     );
@@ -22373,7 +22398,6 @@ class Processing extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component
 
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(state.photos);
   return {
     photos: state.photos
   };
@@ -22413,7 +22437,6 @@ class PhotoList extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component 
 
   render() {
     let photos = this.props.photos;
-    console.log(photos);
     let processingItems = photos.map((item, index) => {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__containers_ProcessingItem_jsx__["a" /* default */], { item: item, key: index });
     });
@@ -22900,15 +22923,17 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, ".app__nav___2Mm1A {\n  background-color: #fff;\n  position: fixed;\n  top: 0;\n  width: 100%;\n  padding: 32px;\n}\n\n.app__nav__link___2CQHT,\n.app__nav__link___2CQHT:visited,\n.app__nav__link___2CQHT:link,\n.app__nav__link___2CQHT:active {\n  color: #999;\n  font-size: 11px;\n  text-decoration: none;\n  transition: color 0.2s ease;\n  padding: 0 16px;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n}\n\n.app__nav__link___2CQHT:hover {\n  color: #0099ff;\n}\n\n.app__disableBackground___1cAE4 {\n  background-color: none;\n}\n\n.app__content___37dfQ {\n  margin: 0 auto;\n  max-width: 700px;\n  width: 100%;\n}\n\n.app__rightBackground___2AelG {\n  background-image: url(" + __webpack_require__(103) + ");\n  background-repeat: no-repeat;\n  background-size: cover;\n  height: 120vh;\n  width: 83.55vh;\n  position: fixed;\n  top: 0;\n  right: -15vh;\n  z-index: -1;\n}\n\n@media screen and (min-width: 600px) {\n  .app__rightBackground___2AelG {\n    right: -55vh;\n  }\n}\n\n@media screen and (min-width: 800px) {\n  .app__rightBackground___2AelG {\n    right: -35vh;\n  }\n}\n\n@media screen and (min-width: 1100px) {\n  .app__rightBackground___2AelG {\n    right: -15vh;\n  }\n}\n\n@media screen and (max-width: 600px) {\n  .app__rightBackground___2AelG {\n    display: none;\n  }\n}\n", ""]);
+exports.push([module.i, ".app__container___1kHrc {\n  position: relative;\n  min-height: 100vh;\n}\n\n.app__nav___2Mm1A {\n  background-color: #fff;\n  position: fixed;\n  top: 0;\n  width: 100%;\n  padding: 32px;\n}\n\n.app__nav__link___2CQHT,\n.app__nav__link___2CQHT:visited,\n.app__nav__link___2CQHT:link,\n.app__nav__link___2CQHT:active {\n  color: #999;\n  font-size: 11px;\n  text-decoration: none;\n  transition: color 0.2s ease;\n  padding: 0 16px;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n}\n\n.app__nav__link___2CQHT:hover {\n  color: #0099ff;\n}\n\n.app__disableBackground___1cAE4 {\n  background-color: rgba(0,0,0,0);\n}\n\n.app__content___37dfQ {\n  margin: 0 auto;\n  max-width: 700px;\n  width: 100%;\n}\n\n.app__rightBackground___2AelG {\n  background-image: url(" + __webpack_require__(103) + ");\n  background-repeat: no-repeat;\n  background-size: cover;\n  height: 120vh;\n  width: 83.55vh;\n  position: fixed;\n  top: 0;\n  right: -15vh;\n  z-index: -1;\n}\n\n.app__footer___3EQjP {\n  position: absolute;\n  bottom: 0;\n\n  display: block;\n  width: 100%;\n  padding-bottom: 16px;\n\n  color: #bbb;\n  font-size: 12px;\n  font-weight: 300;\n  text-align: center;\n}\n\n@media screen and (min-width: 600px) {\n  .app__rightBackground___2AelG {\n    right: -55vh;\n  }\n}\n\n@media screen and (min-width: 900px) {\n  .app__rightBackground___2AelG {\n    right: -35vh;\n  }\n}\n\n@media screen and (min-width: 1100px) {\n  .app__rightBackground___2AelG {\n    right: -15vh;\n  }\n}\n\n@media screen and (max-width: 600px) {\n  .app__rightBackground___2AelG {\n    display: none;\n  }\n\n  .app__footer___3EQjP {\n    display: none;\n  }\n}\n", ""]);
 
 // exports
 exports.locals = {
+	"container": "app__container___1kHrc",
 	"nav": "app__nav___2Mm1A",
 	"nav__link": "app__nav__link___2CQHT",
 	"disableBackground": "app__disableBackground___1cAE4",
 	"content": "app__content___37dfQ",
-	"rightBackground": "app__rightBackground___2AelG"
+	"rightBackground": "app__rightBackground___2AelG",
+	"footer": "app__footer___3EQjP"
 };
 
 /***/ }),

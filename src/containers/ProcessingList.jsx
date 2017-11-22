@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import PhotoList from '../components/photolist/photolist.jsx';
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(state.photos);
   return {
     photos: state.photos
   };

@@ -12,7 +12,6 @@ class PhotoList extends React.Component {
 
   render() {
     let photos = this.props.photos;
-    console.log(photos);
     let processingItems = photos.map((item, index) => {
       return <ProcessingItem item={item} key={index} />
     });

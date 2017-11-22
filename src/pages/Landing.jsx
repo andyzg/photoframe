@@ -12,6 +12,14 @@ class Landing extends React.Component {
     this.state = {};
   }
 
+  onPhoneClick() {
+    ga('send', 'pageview', 'mobile-phone-instagram');
+  }
+
+  onGalleryClick() {
+    ga('send', 'pageview', 'mobile-gallery-instagram');
+  }
+
   render() {
     return (
       <div className={styles.container}>
@@ -20,8 +28,8 @@ class Landing extends React.Component {
           <h3> Transform your feed into a beautiful collage of photos</h3>
           <UploadButton className={styles.button} text={'UPLOAD PHOTOS'} fileInput={$('#file-input')} />
         </div>
-        <img className={styles.iphone} src="./img/iphone.png" />
-        <a href="https://www.instagram.com/andy.fuji"><img className={styles.gallery} src="./img/background-full.png" /></a>
+        <a onClick={this.onPhoneClick} href="https://www.instagram.com/andy.fuji"><img className={styles.iphone} src="./img/iphone.png" /></a>
+        <a onClick={this.onGalleryClick} href="https://www.instagram.com/andy.fuji"><img className={styles.gallery} src="./img/background-full.png" /></a>
       </div>
     );
   }
