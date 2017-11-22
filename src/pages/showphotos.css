@@ -1,6 +1,7 @@
 .container {
   margin: 200px auto;
   display: block;
+  width: 60%;
 }
 
 .title {
