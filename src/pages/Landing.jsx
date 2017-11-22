@@ -21,6 +21,7 @@ class Landing extends React.Component {
           <UploadButton className={styles.button} text={'UPLOAD PHOTOS'} fileInput={$('#file-input')} />
         </div>
         <img className={styles.iphone} src="./img/iphone.png" />
+        <a href="https://www.instagram.com/andy.fuji"><img className={styles.gallery} src="./img/background-full.png" /></a>
       </div>
     );
   }
