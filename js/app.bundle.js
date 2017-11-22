@@ -21734,7 +21734,6 @@ class Nav extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   constructor(props) {
     super(props);
     var hash = window.location.hash.substr(1);
-    console.log(hash);
     if (hash === 'about') {
       this.onClickAbout();
     }
@@ -21749,6 +21748,10 @@ class Nav extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   }
 
   render() {
+    let classList = [__WEBPACK_IMPORTED_MODULE_8__app_css___default.a.nav];
+    if (this.props.page === LANDING) {
+      classList.push(__WEBPACK_IMPORTED_MODULE_8__app_css___default.a.disableBackground);
+    }
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
       { className: __WEBPACK_IMPORTED_MODULE_8__app_css___default.a.nav },
@@ -21799,7 +21802,7 @@ class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
       null,
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ConnectedNav, null),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(ConnectedNav, { page: this.props.page }),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         { className: __WEBPACK_IMPORTED_MODULE_8__app_css___default.a.content },
@@ -22682,7 +22685,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, ".processing__container___16_KW {\n  padding-top: 200px;\n  width: 60%;\n  display: block;\n  margin: 0 auto;\n}\n\n.processing__divider___aR6XH {\n  width: 60%;\n  background-color: #eeeeee;\n  height: 1px;\n  width: 100%;\n  margin: 8px 0;\n}\n\n.processing__downloadButton___5tuEd {\n  display: block;\n  margin: 32px auto;\n}\n", ""]);
+exports.push([module.i, ".processing__container___16_KW {\n  padding-top: 100px;\n  width: 60%;\n  display: block;\n  margin: 0 auto;\n}\n\n.processing__divider___aR6XH {\n  width: 60%;\n  background-color: #eeeeee;\n  height: 1px;\n  width: 100%;\n  margin: 8px 0;\n}\n\n.processing__downloadButton___5tuEd {\n  display: block;\n  margin: 32px auto;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -22901,12 +22904,13 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, ".app__nav___2Mm1A {\n  position: fixed;\n  top: 0;\n  width: 100%;\n  padding: 32px 32px 0 32px;\n}\n\n.app__nav__link___2CQHT,\n.app__nav__link___2CQHT:visited,\n.app__nav__link___2CQHT:link,\n.app__nav__link___2CQHT:active {\n  color: #999;\n  font-size: 11px;\n  text-decoration: none;\n  transition: color 0.2s ease;\n  padding: 0 16px;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n}\n\n.app__nav__link___2CQHT:hover {\n  color: #0099ff;\n}\n\n.app__content___37dfQ {\n  margin: 0 auto;\n  max-width: 700px;\n  width: 100%;\n}\n\n.app__rightBackground___2AelG {\n  background-image: url(" + __webpack_require__(103) + ");\n  background-repeat: no-repeat;\n  background-size: cover;\n  height: 120vh;\n  width: 83.55vh;\n  position: fixed;\n  top: 0;\n  right: -15vh;\n  z-index: -1;\n}\n\n@media screen and (min-width: 600px) {\n  .app__rightBackground___2AelG {\n    right: -55vh;\n  }\n}\n\n@media screen and (min-width: 800px) {\n  .app__rightBackground___2AelG {\n    right: -35vh;\n  }\n}\n\n@media screen and (min-width: 1100px) {\n  .app__rightBackground___2AelG {\n    right: -15vh;\n  }\n}\n\n@media screen and (max-width: 600px) {\n  .app__rightBackground___2AelG {\n    display: none;\n  }\n}\n", ""]);
+exports.push([module.i, ".app__nav___2Mm1A {\n  background-color: #fff;\n  position: fixed;\n  top: 0;\n  width: 100%;\n  padding: 32px;\n}\n\n.app__nav__link___2CQHT,\n.app__nav__link___2CQHT:visited,\n.app__nav__link___2CQHT:link,\n.app__nav__link___2CQHT:active {\n  color: #999;\n  font-size: 11px;\n  text-decoration: none;\n  transition: color 0.2s ease;\n  padding: 0 16px;\n  text-transform: uppercase;\n  letter-spacing: 2px;\n}\n\n.app__nav__link___2CQHT:hover {\n  color: #0099ff;\n}\n\n.app__disableBackground___1cAE4 {\n  background-color: none;\n}\n\n.app__content___37dfQ {\n  margin: 0 auto;\n  max-width: 700px;\n  width: 100%;\n}\n\n.app__rightBackground___2AelG {\n  background-image: url(" + __webpack_require__(103) + ");\n  background-repeat: no-repeat;\n  background-size: cover;\n  height: 120vh;\n  width: 83.55vh;\n  position: fixed;\n  top: 0;\n  right: -15vh;\n  z-index: -1;\n}\n\n@media screen and (min-width: 600px) {\n  .app__rightBackground___2AelG {\n    right: -55vh;\n  }\n}\n\n@media screen and (min-width: 800px) {\n  .app__rightBackground___2AelG {\n    right: -35vh;\n  }\n}\n\n@media screen and (min-width: 1100px) {\n  .app__rightBackground___2AelG {\n    right: -15vh;\n  }\n}\n\n@media screen and (max-width: 600px) {\n  .app__rightBackground___2AelG {\n    display: none;\n  }\n}\n", ""]);
 
 // exports
 exports.locals = {
 	"nav": "app__nav___2Mm1A",
 	"nav__link": "app__nav__link___2CQHT",
+	"disableBackground": "app__disableBackground___1cAE4",
 	"content": "app__content___37dfQ",
 	"rightBackground": "app__rightBackground___2AelG"
 };
@@ -23110,7 +23114,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, ".showphotos__container___chvLB {\n  margin: 200px auto;\n  display: block;\n  width: 60%;\n}\n\n.showphotos__title___k1lM7 {\n  margin-bottom: 16px;\n}\n", ""]);
+exports.push([module.i, ".showphotos__container___chvLB {\n  margin: 0px auto;\n  padding-top: 100px;\n  display: block;\n  width: 60%;\n}\n\n.showphotos__title___k1lM7 {\n  margin-bottom: 16px;\n}\n", ""]);
 
 // exports
 exports.locals = {
