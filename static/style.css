@@ -56,3 +56,12 @@ h4 {
   font-weight: 300;
   line-height: 1.25;
 }
+
+p {
+  line-height: 1.5;
+  font-size: 18px;
+  font-weight: 300;
+  color: #555555;
+
+  margin-bottom: 16px;
+}

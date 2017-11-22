@@ -18,3 +18,15 @@ export const downloadPhotos = () => {
     type: 'DOWNLOAD_PHOTOS'
   }
 }
+
+export const goHome = () => {
+  return {
+    type: 'GO_HOME'
+  }
+}
+
+export const goAbout = () => {
+  return {
+    type: 'GO_ABOUT'
+  }
+}

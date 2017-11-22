@@ -16,7 +16,7 @@ class Landing extends React.Component {
     return (
       <div className={styles.container}>
         <div className={styles.leftContent}>
-          <h1> Instaframe </h1>
+          <h1> Photoframe </h1>
           <h3> Transform your feed into a beautiful collage of photos</h3>
           <UploadButton className={styles.button} text={'UPLOAD PHOTOS'} fileInput={$('#file-input')} />
         </div>

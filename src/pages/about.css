@@ -1,0 +1,22 @@
+.container {
+  display: block;
+  margin: 200px auto;
+}
+
+.title {
+  margin-bottom: 16px;
+}
+
+.question {
+  margin-top: 16px;
+  color: #555555;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.subheader {
+  margin-top: 32px;
+  color: #555555;
+  font-weight: 600;
+  font-size: 18px;
+}
