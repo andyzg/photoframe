@@ -23,7 +23,6 @@ class Nav extends React.Component {
   constructor(props) {
     super(props);
     var hash = window.location.hash.substr(1);
-    console.log(hash);
     if (hash === 'about') {
       this.onClickAbout();
     }
@@ -38,6 +37,10 @@ class Nav extends React.Component {
   }
 
   render() {
+    let classList = [styles.nav];
+    if (this.props.page === LANDING) {
+      classList.push(styles.disableBackground);
+    }
     return (
       <div className={styles.nav}>
         <a onClick={this.onClickHome.bind(this)} className={styles.nav__link} href="#">Home</a>
@@ -79,7 +82,7 @@ class App extends React.Component {
 
     return (
       <div>
-        <ConnectedNav />
+        <ConnectedNav page={this.props.page} />
         <div className={styles.content}>
           {content}
         </div>
