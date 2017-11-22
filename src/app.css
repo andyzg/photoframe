@@ -64,6 +64,13 @@
   text-align: center;
 }
 
+.footer:visited,
+.footer:link,
+.footer:active {
+  text-decoration: none;
+  color: #bbb;
+}
+
 @media screen and (min-width: 600px) {
   .rightBackground {
     right: -55vh;
