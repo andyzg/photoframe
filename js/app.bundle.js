@@ -23110,7 +23110,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, ".showphotos__container___chvLB {\n  margin: 200px auto;\n  display: block;\n}\n\n.showphotos__title___k1lM7 {\n  margin-bottom: 16px;\n}\n", ""]);
+exports.push([module.i, ".showphotos__container___chvLB {\n  margin: 200px auto;\n  display: block;\n  width: 60%;\n}\n\n.showphotos__title___k1lM7 {\n  margin-bottom: 16px;\n}\n", ""]);
 
 // exports
 exports.locals = {
