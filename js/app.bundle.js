@@ -21754,7 +21754,7 @@ class Nav extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     }
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      { className: classList },
+      { className: classList.join(' ') },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'a',
         { onClick: this.onClickHome.bind(this), className: __WEBPACK_IMPORTED_MODULE_8__app_css___default.a.nav__link, href: '#' },
@@ -21863,7 +21863,12 @@ class Landing extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__containers_UploadButton_jsx__["a" /* default */], { className: __WEBPACK_IMPORTED_MODULE_2__landing_css___default.a.button, text: 'UPLOAD PHOTOS', fileInput: $('#file-input') })
       ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: __WEBPACK_IMPORTED_MODULE_2__landing_css___default.a.iphone, src: './img/iphone.png' })
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: __WEBPACK_IMPORTED_MODULE_2__landing_css___default.a.iphone, src: './img/iphone.png' }),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'a',
+        { href: 'https://www.instagram.com/andy.fuji' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: __WEBPACK_IMPORTED_MODULE_2__landing_css___default.a.gallery, src: './img/background-full.png' })
+      )
     );
   }
 }
@@ -22200,13 +22205,14 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, ".landing__leftContent___Ix9rm {\n  width: 400px;\n}\n\n.landing__container___1n3qD {\n  align-items: center;\n  display: flex;\n  height: 100vh;\n}\n\n.landing__iphone___1bS03 {\n  width: 300px;\n}\n\n.landing__button___FbwHw {\n  margin-top: 16px;\n  margin-bottom: 16px;\n}\n\n.landing__dragCaption___1Nlj8 {\n  color: #bbb;\n  font-size: 14px;\n}\n\n@media screen and (max-width: 600px) {\n  .landing__container___1n3qD {\n    display: block;\n    height: calc(100vh - 200px);\n    padding-top: 200px;\n    overflow: hidden;\n  }\n\n  .landing__leftContent___Ix9rm {\n    display: block;\n    width: 60%;\n    margin: 0 auto;\n  }\n\n  .landing__iphone___1bS03 {\n    display: block;\n    margin: 16px auto;\n    width: 80%;\n  }\n}\n", ""]);
+exports.push([module.i, ".landing__leftContent___Ix9rm {\n  width: 400px;\n}\n\n.landing__container___1n3qD {\n  align-items: center;\n  display: flex;\n  height: 100vh;\n}\n\n.landing__iphone___1bS03 {\n  width: 300px;\n}\n\n.landing__gallery___3JmSl {\n  display: none;\n}\n\n.landing__button___FbwHw {\n  margin-top: 16px;\n  margin-bottom: 16px;\n}\n\n.landing__dragCaption___1Nlj8 {\n  color: #bbb;\n  font-size: 14px;\n}\n\n@media screen and (max-width: 600px) {\n  .landing__container___1n3qD {\n    display: block;\n    height: calc(100vh - 200px);\n    padding-top: 200px;\n    overflow: hidden;\n  }\n\n  .landing__leftContent___Ix9rm {\n    display: block;\n    width: 60%;\n    margin: 0 auto;\n  }\n\n  .landing__iphone___1bS03 {\n    display: none;\n  }\n\n  .landing__gallery___3JmSl {\n    display: block;\n    margin: 0 auto;\n    margin-top: 32px;\n    width: 80%;\n  }\n}\n", ""]);
 
 // exports
 exports.locals = {
 	"leftContent": "landing__leftContent___Ix9rm",
 	"container": "landing__container___1n3qD",
 	"iphone": "landing__iphone___1bS03",
+	"gallery": "landing__gallery___3JmSl",
 	"button": "landing__button___FbwHw",
 	"dragCaption": "landing__dragCaption___1Nlj8"
 };
@@ -23210,7 +23216,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, ".style__list___1UOb7 {\n  display: flex;\n  flex-direction: column;\n}\n\n.style__photo___4SeYx {\n  width: 100%;\n  margin-bottom: 16px;\n  border: 1px solid rgba(0,0,0,.1);\n}\n", ""]);
+exports.push([module.i, ".style__list___1UOb7 {\n  display: flex;\n  flex-direction: column;\n}\n\n.style__photo___4SeYx {\n  width: 100%;\n  margin-bottom: 16px;\n  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);\n}\n", ""]);
 
 // exports
 exports.locals = {

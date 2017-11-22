@@ -42,7 +42,7 @@ class Nav extends React.Component {
       classList.push(styles.disableBackground);
     }
     return (
-      <div className={classList}>
+      <div className={classList.join(' ')}>
         <a onClick={this.onClickHome.bind(this)} className={styles.nav__link} href="#">Home</a>
         <a onClick={this.onClickAbout.bind(this)} className={styles.nav__link} href="#about">About</a>
       </div>

@@ -12,6 +12,10 @@
   width: 300px;
 }
 
+.gallery {
+  display: none;
+}
+
 .button {
   margin-top: 16px;
   margin-bottom: 16px;
@@ -37,8 +41,13 @@
   }
 
   .iphone {
+    display: none;
+  }
+
+  .gallery {
     display: block;
-    margin: 16px auto;
+    margin: 0 auto;
+    margin-top: 32px;
     width: 80%;
   }
 }
