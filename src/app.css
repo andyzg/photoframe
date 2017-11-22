@@ -64,9 +64,9 @@
   text-align: center;
 }
 
-.footer:visited,
-.footer:link,
-.footer:active {
+.footer a:visited,
+.footer a:link,
+.footer a:active {
   text-decoration: none;
   color: #bbb;
 }
