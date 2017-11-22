@@ -21188,8 +21188,7 @@ class Nav extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     var hash = window.location.hash.substr(1);
     console.log(hash);
     if (hash === 'about') {
-      console.log('hey');
-      this.onClickHome();
+      this.onClickAbout();
     }
   }
 

@@ -23,8 +23,7 @@ class Nav extends React.Component {
     var hash = window.location.hash.substr(1);
     console.log(hash);
     if (hash === 'about') {
-      console.log('hey');
-      this.onClickHome();
+      this.onClickAbout();
     }
   }
 
