@@ -7,6 +7,7 @@ import Landing from './pages/Landing.jsx';
 import Config from './pages/Config.jsx';
 import Processing from './pages/Processing.jsx';
 import About from './pages/About.jsx';
+import ShowPhotos from './pages/ShowPhotos.jsx';
 
 import styles from './app.css';
 
@@ -14,6 +15,7 @@ const LANDING = 'LANDING';
 const CONFIG = 'CONFIG';
 const PROCESSING = 'PROCESSING';
 const ABOUT = 'ABOUT';
+const SHOW_PHOTOS = 'SHOW_PHOTOS';
 
 
 class Nav extends React.Component {
@@ -65,6 +67,9 @@ class App extends React.Component {
         break;
       case ABOUT:
         content = <About />;
+        break;
+      case SHOW_PHOTOS:
+        content = <ShowPhotos />;
         break;
       case LANDING:
       default:

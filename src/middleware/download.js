@@ -1,5 +1,4 @@
 const download = store => next => action => {
-  console.log(action.type);
   if (action.type === 'DOWNLOAD_PHOTOS') {
     let photos = store.getState().processedPhotos;
     let zip = new JSZip();

@@ -4,6 +4,8 @@ const page = (state = 'LANDING', action) => {
       return 'LANDING';
     case 'GO_ABOUT':
       return 'ABOUT';
+    case 'SHOW_PHOTOS':
+      return 'SHOW_PHOTOS';
     case 'UPLOAD_PHOTOS':
       return 'PROCESSING';
     default:

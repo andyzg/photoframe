@@ -13,6 +13,12 @@ export const addCompletePhoto = (imageData, name) => {
   };
 }
 
+export const showPhotos = () => {
+  return {
+    type: 'SHOW_PHOTOS'
+  }
+}
+
 export const downloadPhotos = () => {
   return {
     type: 'DOWNLOAD_PHOTOS'
