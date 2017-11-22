@@ -63,12 +63,6 @@ class About extends React.Component {
           JavaScript is awesome :)
         </p>
 
-        <h3 className={styles.subheader}> Support </h3>
-        <p>
-          Photoframe doesn't support mobile web because of mobile web limitations.
-          Sorry friends!
-        </p>
-
       </div>
     );
   }

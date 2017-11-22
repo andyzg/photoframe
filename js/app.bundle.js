@@ -21754,7 +21754,7 @@ class Nav extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     }
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
-      { className: __WEBPACK_IMPORTED_MODULE_8__app_css___default.a.nav },
+      { className: classList },
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'a',
         { onClick: this.onClickHome.bind(this), className: __WEBPACK_IMPORTED_MODULE_8__app_css___default.a.nav__link, href: '#' },
@@ -22797,16 +22797,6 @@ class About extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         'p',
         null,
         'JavaScript is awesome :)'
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'h3',
-        { className: __WEBPACK_IMPORTED_MODULE_1__about_css___default.a.subheader },
-        ' Support '
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'p',
-        null,
-        'Photoframe doesn\'t support mobile web because of mobile web limitations. Sorry friends!'
       )
     );
   }
@@ -22854,7 +22844,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, ".about__container___fcWqq {\n  display: block;\n  margin: 200px auto;\n}\n\n.about__title___3Js5K {\n  margin-bottom: 16px;\n}\n\n.about__question___3daGA {\n  margin-top: 16px;\n  color: #555555;\n  text-decoration: underline;\n  font-style: italic;\n}\n\n.about__subheader___2-Rd6 {\n  margin-top: 32px;\n  color: #555555;\n  font-weight: 600;\n  font-size: 18px;\n}\n", ""]);
+exports.push([module.i, ".about__container___fcWqq {\n  width: 80%;\n  display: block;\n  margin: 200px auto;\n}\n\n.about__title___3Js5K {\n  margin-bottom: 16px;\n}\n\n.about__question___3daGA {\n  margin-top: 16px;\n  color: #555555;\n  text-decoration: underline;\n  font-style: italic;\n}\n\n.about__subheader___2-Rd6 {\n  margin-top: 32px;\n  color: #555555;\n  font-weight: 600;\n  font-size: 18px;\n}\n", ""]);
 
 // exports
 exports.locals = {
