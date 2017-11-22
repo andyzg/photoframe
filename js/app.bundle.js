@@ -21749,7 +21749,6 @@ class Nav extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
   render() {
     let classList = [__WEBPACK_IMPORTED_MODULE_8__app_css___default.a.nav];
-    console.log(this.props.page);
     if (this.props.page === LANDING) {
       classList.push(__WEBPACK_IMPORTED_MODULE_8__app_css___default.a.disableBackground);
     }

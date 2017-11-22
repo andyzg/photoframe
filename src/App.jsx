@@ -38,7 +38,6 @@ class Nav extends React.Component {
 
   render() {
     let classList = [styles.nav];
-    console.log(this.props.page);
     if (this.props.page === LANDING) {
       classList.push(styles.disableBackground);
     }
