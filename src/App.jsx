@@ -59,7 +59,6 @@ class App extends React.Component {
   }
 
   render() {
-
     let content = null;
     switch (this.props.page) {
       case CONFIG:
@@ -81,12 +80,15 @@ class App extends React.Component {
     }
 
     return (
-      <div>
+      <div className={styles.container}>
         <ConnectedNav page={this.props.page} />
         <div className={styles.content}>
           {content}
         </div>
         {this.props.page === LANDING ? <div className={styles.rightBackground} /> : null}
+        <div className={styles.footer}>
+          Made by <a href="https://www.instagram.com/andy.fuji/">@andy.fuji</a>
+        </div>
       </div>
     );
   }
