@@ -1,11 +1,10 @@
 import { connect } from 'react-redux';
-import { downloadPhotos } from '../actions/index.js';
+import { downloadPhotos, showPhotos } from '../actions/index.js';
 
 import Button from '../components/button/button.jsx';
 
 
 const mapStateToProps = (state, ownProps) => {
-  console.log('oh hey');
   return {
     ownProps,
     isDisabled: state.photos.length !== Object.keys(state.processedPhotos).length,
@@ -16,7 +15,11 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     onClick: () => {
-      dispatch(downloadPhotos());
+      if (window.isMobileOrTablet()) {
+        dispatch(showPhotos());
+      } else {
+        dispatch(downloadPhotos());
+      }
     }
   }
 };
