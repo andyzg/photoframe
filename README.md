@@ -6,3 +6,4 @@ a square format. You can upload as many photos as you want, and get them all
 processed within seconds. It currently only supports desktop.
 a
 o hi
+ome 
