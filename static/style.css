@@ -65,3 +65,17 @@ p {
 
   margin-bottom: 16px;
 }
+
+/* Fonts */
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNova-Semibold.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
