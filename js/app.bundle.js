@@ -22112,7 +22112,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 
 
 // module
-exports.push([module.i, ".style__button___Dv_TK {\n  background: linear-gradient(109.39deg, #00D2E5 0%, #0095FF 100%);\n  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);\n  border-radius: 4px;\n\n  width: 200px;\n  height: 60px;\n\n  color: white;\n  font-size: 14px;\n  font-weight: 600;\n  letter-spacing: 2px;\n\n  cursor: pointer;\n}\n\n.style__disabled___3kqrL {\n  opacity: 0.5;\n}\n\n.style__button___Dv_TK:hover {\n  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.25);\n}\n", ""]);
+exports.push([module.i, ".style__button___Dv_TK {\n  background: linear-gradient(109.39deg, #00D2E5 0%, #0095FF 100%);\n  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);\n  border-radius: 4px;\n\n  width: 200px;\n  height: 60px;\n\n  color: white;\n  font-size: 14px;\n  font-weight: 600;\n  letter-spacing: 2px;\n\n  cursor: pointer;\n}\n\n.style__disabled___3kqrL {\n  opacity: 0.5;\n}\n\n.style__button___Dv_TK:hover {\n  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.25);\n}\n\n.style__button___Dv_TK:active {\n  border-style: none;\n}\n", ""]);
 
 // exports
 exports.locals = {
