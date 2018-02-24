@@ -1,7 +1,6 @@
 .container {
   display: block;
-  padding-top: 15vh;
-  padding-bottom: 10vh
+  padding: 15vh 32px 10vh 32px;
 }
 
 .title {

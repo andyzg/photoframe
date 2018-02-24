@@ -17,3 +17,12 @@
   display: block;
   margin: 32px auto;
 }
+
+.back,
+.back:link,
+.back:visited {
+  color: #999;
+  text-align: center;
+  text-decoration: underline;
+  display: block;
+}

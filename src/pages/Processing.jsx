@@ -20,6 +20,9 @@ class Processing extends React.Component {
         <ProcessingPhotoList />
         <div className={styles.divider} />
         <DownloadButton className={styles.downloadButton} text={'DOWNLOAD'} />
+        <a className={styles.back} href='/photoframe'>
+          Click here to upload more
+        </a>
       </div>
     );
   }

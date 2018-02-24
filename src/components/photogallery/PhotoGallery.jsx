@@ -21,6 +21,9 @@ class PhotoGallery extends React.Component {
     return (
       <div className={styles.list}>
         {galleryElement}
+        <a className={styles.back} href='/photoframe'>
+          Click here to upload more
+        </a>
       </div>
     );
   }
