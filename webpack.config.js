@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 module.exports = {
    entry: './src/index.jsx',
    output: {
@@ -21,5 +23,12 @@ module.exports = {
         loader: 'style-loader!css-loader?modules=true&localIdentName=[name]__[local]___[hash:base64:5]'
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.DefinePlugin({ // <-- key to reducing React's size
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    })
+  ]
 };

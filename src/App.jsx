@@ -81,7 +81,6 @@ class App extends React.Component {
 
     return (
       <div className={styles.container}>
-        <ConnectedNav page={this.props.page} />
         <div className={styles.content}>
           {content}
         </div>
