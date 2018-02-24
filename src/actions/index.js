@@ -40,3 +40,16 @@ export const goAbout = () => {
     type: 'GO_ABOUT'
   }
 }
+
+export const setAspectRatio = (ratio) => {
+  return {
+    type: 'SET_CONFIG',
+    ratio: ratio
+  }
+}
+
+export const startProcessingPhotos = () => {
+  return {
+    type: 'DONE_CONFIG',
+  }
+}

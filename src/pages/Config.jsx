@@ -2,6 +2,10 @@ import React from 'react';
 
 import styles from './config.css';
 
+import DoneConfigButton from '../containers/DoneConfigButton.jsx';
+import PhotoPreview from '../containers/PhotoPreview.jsx';
+import ConfigOptions from '../components/configoptions/configoptions.jsx';
+
 class Config extends React.Component {
 
   constructor(props) {
@@ -16,8 +20,11 @@ class Config extends React.Component {
       <div className={styles.container}>
         <div>
           <h2 className={styles.title}> One last step... </h2>
-          <h4> What kind of framing style do you want?</h4>
+          <h4>Choose how much padding you want your framed photo to have.</h4>
+          <PhotoPreview />
+          <ConfigOptions />
         </div>
+        <DoneConfigButton text="DONE" />
       </div>
     );
   }

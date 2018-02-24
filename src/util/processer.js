@@ -57,8 +57,7 @@ class Processor {
     this.ctx.drawImage(image, x, y, resultWidth, resultHeight);
 
 
-    this.callback(this.canvas.toDataURL());
-    this.canvas.remove();
+    this.callback(this.canvas);
   }
 }
 

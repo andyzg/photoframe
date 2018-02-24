@@ -15,10 +15,19 @@ class Photo {
     return false;
   }
 
-  process(callback) {
-    let processor = new Processor(1080, 0.952);
-    processor.uploadImageFile(this.file, (data) => {
-      callback(data, this.file.name);
+  process(ratio, callback) {
+    let processor = new Processor(1080, ratio);
+    processor.uploadImageFile(this.file, (canvas) => {
+      callback(canvas.toDataURL(), this.file.name);
+      canvas.remove();
+    });
+  }
+
+  render(ratio, callback) {
+    let processor = new Processor(1080, ratio);
+    processor.uploadImageFile(this.file, (canvas) => {
+      callback(canvas.toDataURL(), this.file.name);
+      canvas.remove();
     });
   }
 }

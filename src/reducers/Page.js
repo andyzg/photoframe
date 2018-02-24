@@ -7,6 +7,8 @@ const page = (state = 'LANDING', action) => {
     case 'SHOW_PHOTOS':
       return 'SHOW_PHOTOS';
     case 'UPLOAD_PHOTOS':
+      return 'CONFIG';
+    case 'DONE_CONFIG':
       return 'PROCESSING';
     default:
       return state;

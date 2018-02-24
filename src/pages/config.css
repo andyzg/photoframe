@@ -1,7 +1,7 @@
 .container {
-  align-items: center;
-  display: flex;
-  height: 100vh;
+  display: block;
+  padding-top: 15vh;
+  padding-bottom: 10vh
 }
 
 .title {

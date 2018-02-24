@@ -6,7 +6,8 @@ import Item from '../components/item/Item.jsx';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    photo: ownProps.item
+    photo: ownProps.item,
+    ratio: state.config
   };
 };
 

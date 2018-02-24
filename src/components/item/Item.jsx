@@ -17,7 +17,7 @@ class ProcessingItem extends React.Component {
 
   render() {
     if (this.state.status !== COMPLETE) {
-      this.props.photo.process((imageData, name) => {
+      this.props.photo.process(this.props.ratio, (imageData, name) => {
         this.props.addCompletePhoto(imageData, name);
         this.setState({ status: COMPLETE });
       });
