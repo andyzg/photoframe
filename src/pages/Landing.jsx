@@ -25,8 +25,8 @@ class Landing extends React.Component {
       <div className={styles.container}>
         <div className={styles.leftContent}>
           <h1> Photoframe </h1>
-          <h3> Transform your feed into a beautiful collage of photos</h3>
-          <UploadButton className={styles.button} text={'UPLOAD PHOTOS'} fileInput={$('#file-input')} />
+          <h3> Frame your photos to have white borders. </h3>
+          <UploadButton className={styles.button} text={'ADD PHOTOS'} fileInput={$('#file-input')} />
         </div>
         <a onClick={this.onPhoneClick} href="https://www.instagram.com/andy.fuji"><img className={styles.iphone} src="./img/iphone.png" /></a>
         <a onClick={this.onGalleryClick} href="https://www.instagram.com/andy.fuji"><img className={styles.gallery} src="./img/background-full.png" /></a>
