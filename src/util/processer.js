@@ -1,6 +1,7 @@
 class Processor {
 
   constructor(length, aspectRatio) {
+    length *= 2;
     this.canvas = document.createElement('canvas');
     this.canvas.width = length;
     this.canvas.height = length;
